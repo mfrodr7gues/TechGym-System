@@ -64,14 +64,14 @@ public class Aluno extends Usuario {
     public void criarFichaTreino(String nome, String exercicios) {
         FichaTreino novaFicha = new FichaTreino(exercicios);
         getFichasTreino().add(novaFicha);
-        System.out.println("Ficha criada: " + novaFicha.getIdFileNotFound());
+        System.out.println("Ficha criada: " + novaFicha.getIdFichaDeExercicios());
     }
 
     @Override
     public void editarFichaTreino(int id, String novosExercicios) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.editarFileNotFound(novosExercicios);
+            ficha.editarFichaDeExercicios(novosExercicios);
         }
     }
 
@@ -79,7 +79,7 @@ public class Aluno extends Usuario {
     public void salvarFichaTreino(int id) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.salvarFileNotFound();
+            ficha.salvarFichaDeExercicios();
         }
     }
 
@@ -87,7 +87,7 @@ public class Aluno extends Usuario {
     public void acessarFichaTreino(int id) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.accessarFileNotFound();
+            ficha.accessarFichaDeExercicios();
         }
     }
 
@@ -125,7 +125,7 @@ public class Aluno extends Usuario {
     // Métodos específicos da classe Aluno
     private FichaTreino buscarFichaPorId (int id) {
         for (FichaTreino ficha : getFichasTreino()) {
-            if (ficha.getIdFileNotFound() == id) {
+            if (ficha.getIdFichaDeExercicios() == id) {
                 return ficha;
             }
         }

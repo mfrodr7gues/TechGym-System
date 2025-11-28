@@ -29,7 +29,7 @@ public class Instrutor extends Usuario {
 
     private FichaTreino buscarFichaPorId(int id) {
         for (FichaTreino ficha : getFichasTreino()) {
-            if (ficha.getIdFileNotFound() == id) {
+            if (ficha.getIdFichaDeExercicios() == id) {
                 return ficha;
             }
         }
@@ -78,7 +78,7 @@ public class Instrutor extends Usuario {
     public void editarFichaTreino(int id, String novosExercicios) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.editarFileNotFound(novosExercicios);
+            ficha.editarFichaDeExercicios(novosExercicios);
         }
     }
 
@@ -86,7 +86,7 @@ public class Instrutor extends Usuario {
     public void salvarFichaTreino(int id) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.salvarFileNotFound();
+            ficha.salvarFichaDeExercicios();
         }
     }
 
@@ -94,7 +94,7 @@ public class Instrutor extends Usuario {
     public void acessarFichaTreino(int id) {
         FichaTreino ficha = buscarFichaPorId(id);
         if (ficha != null) {
-            ficha.accessarFileNotFound();
+            ficha.accessarFichaDeExercicios();
         }
     }
 
