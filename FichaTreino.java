@@ -3,20 +3,20 @@ import java.util.Date;
 public class FichaTreino {
 
     // Atributos
-    private int idFileNotFound;
+    private int idFichaDeExercicios;
     private Date dataCriacao;
     private String exercicios;
 
     // Construtor
     public FichaTreino(String exercicios) {
-        this.idFileNotFound = (int) (Math.random() * 1000) + 3000;
+        this.idFichaDeExercicios = (int) (Math.random() * 1000) + 3000;
         this.dataCriacao = new Date();
         this.exercicios = exercicios;
     }
 
     // // Acesso às privates usando getters e setters
-    public int getIdFileNotFound() { 
-        return idFileNotFound; 
+    public int getIdFichaDeExercicios() { 
+        return idFichaDeExercicios; 
     }
 
     public Date getDataCriacao() { 
@@ -27,20 +27,20 @@ public class FichaTreino {
         return exercicios; 
     }
 
-    public void criarFileNotFound() {
-        System.out.println("Ficha criada: " + idFileNotFound);
+    public void criarFichaDeExercicios() {
+        System.out.println("Ficha criada: " + idFichaDeExercicios);
     }
     
-    public void editarFileNotFound(String novosExercicios) {
+    public void editarFichaDeExercicios(String novosExercicios) {
         this.exercicios = novosExercicios;
         System.out.println("Ficha editada");
     }
     
-    public void salvarFileNotFound() {
+    public void salvarFichaDeExercicios() {
         System.out.println("Ficha salva");
     }
     
-    public void accessarFileNotFound() {
+    public void accessarFichaDeExercicios() {
         System.out.println("Ficha Treino: " + exercicios);
     }
 }
